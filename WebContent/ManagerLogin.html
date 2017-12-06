@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一生只送一人</title>
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+    <link href="css/topAndFoot.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/entry.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="//apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
+ 	<style>
+ 		#cm,#om,#pm{
+ 			font-color:white;
+ 			font-size:7;
+ 			height:20px;
+ 			color:white;
+ 			border:1px;
+ 			margin-top:10px;
+ 			font-family:"微软雅黑";
+ 			width:60px;
+ 		}
+ 	</style>
+ 	<script>
+ 		$(function(){
+ 			$("#cm").click(function(){
+ 				var link=document.getElementById("frame1");
+ 				link.src="ClientServlet?op=selectAllClient"
+ 			})
+ 		})
+ 		$(function(){
+ 			$("#pm").click(function(){
+ 				var link=document.getElementById("frame1");
+ 				link.src="FlowerServlet?op=selectAllFlower"
+ 			})
+ 		})
+ 		$(function(){
+ 			$("#om").click(function(){
+ 				var link=document.getElementById("frame1");
+ 				link.src="OrderServlet"
+ 			})
+ 		})
+ 		$(function(){
+ 			$("li input").mouseleave(function(){
+ 				$(this).css("marginTop","10px")
+ 			})
+ 		})
+ 	</script>
+</head>
+<body>
+<!--*******************************************Top开始***********************************-->
+<div id="topBox">
+    <div id="top">
+        <img class="top_child_img" src="images/logo_03.gif"/>
+        <div class="top_text">roseonly一生只送一人</div>
+        <ul class="top_right">
+            <li class="successEntry showOrHide">
+                <a href="javascript:;">欢迎您</a>
+                <a class="havaName" href="#"></a>
+                <a class="cancel" href="javascript:;">注销</a>
+            </li>
+           
+        </ul>
+    </div>
+</div>
+<!--*******************************************Top结束***********************************-->
+<!--*******************************************bigLogo开始***********************************-->
+<div id="bigLogoBox">
+    <div id="bigLogo"><a href="index.jsp"> roseonly.</a></div>
+</div>
+<!--*******************************************bigLogo结束***********************************-->
+<!--*******************************************nav开始***********************************-->
+<div id="navBox">
+    <div id="allNav">
+        <div id="nav">
+        <ul class="fistUl">
+                <li><input type="button" id="cm" value="客户管理" ></li>
+                <li><input type="button" id="pm" value="产品管理" ></li>
+                <li><input type="button" id="om" value="订单管理" ></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--*********************************二级菜单结束**************************-->
+<div style="height : 1000px">
+	<iframe id="frame1" src="images/bigBgtp.jpg"  width="100%" height="100%">
+    </iframe>
+</div>
+</body>
+</html>
